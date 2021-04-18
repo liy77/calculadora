@@ -79,9 +79,9 @@ class calculadora {
             if (!conta1 || !conta2) throw new Error("Um valor está faltando!");
             if (isNaN(conta1)||isNaN(conta2)) throw new Error("Insira um valor válido!");
             if (this.inteiro === true) {
-                return parseInt((conta1 ^ conta2))
+                return parseInt(Math.pow(conta1, conta2))
             } else {
-                return parseFloat((conta1 ^ conta2));
+                return parseFloat(Math.pow(conta1, conta2));
             }
         } catch (e) {
             throw new Error(e);
@@ -104,4 +104,4 @@ class calculadora {
 
 };
 
-    module.exports = calculadora;
+module.exports = calculadora;
