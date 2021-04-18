@@ -1,6 +1,6 @@
-class calculadora {
+module.exports = class calculadora {
     constructor(inteiro = false) {
-	if (typeof inteiro !== 'boolean') throw new Error("O valor deve ser do tipo boolean!");
+        if (typeof inteiro !== 'boolean') throw new Error("O valor deve ser do tipo boolean!");
         this.inteiro = Boolean(inteiro);
     }
 
@@ -18,8 +18,8 @@ class calculadora {
     somar(conta1, conta2) {
         try {
             if (!conta1 || !conta2) throw new Error("Um valor está faltando!");
-            if (isNaN(conta1)||isNaN(conta2)) throw new Error("Insira um valor válido!");
-            if (this.inteiro === true) {
+            if (isNaN(conta1) || isNaN(conta2)) throw new Error("Insira um valor válido!");
+            if (this.inteiro) {
                 return parseInt((conta1 + conta2))
             } else {
                 return parseFloat((conta1 + conta2));
@@ -32,8 +32,8 @@ class calculadora {
     subtrair(conta1, conta2) {
         try {
             if (!conta1 || !conta2) throw new Error("Um valor está faltando!");
-            if (isNaN(conta1)||isNaN(conta2)) throw new Error("Insira um valor válido!");
-            if (this.inteiro === true) {
+            if (isNaN(conta1) || isNaN(conta2)) throw new Error("Insira um valor válido!");
+            if (this.inteiro) {
                 return parseInt((conta1 - conta2))
             } else {
                 return parseFloat((conta1 - conta2));
@@ -46,8 +46,8 @@ class calculadora {
     multiplicar(conta1, conta2) {
         try {
             if (!conta1 || !conta2) throw new Error("Um valor está faltando!");
-            if (isNaN(conta1)||isNaN(conta2)) throw new Error("Insira um valor válido!");
-            if (this.inteiro === true) {
+            if (isNaN(conta1) || isNaN(conta2)) throw new Error("Insira um valor válido!");
+            if (this.inteiro) {
                 return parseInt((conta1 * conta2))
             } else {
                 return parseFloat((conta1 * conta2));
@@ -60,9 +60,9 @@ class calculadora {
     dividir(conta1, conta2, resto) {
         try {
             if (!conta1 || !conta2) throw new Error("Um valor está faltando!");
-            if (isNaN(conta1)||isNaN(conta2)) throw new Error("Insira um valor válido!");
+            if (isNaN(conta1) || isNaN(conta2)) throw new Error("Insira um valor válido!");
             if (resto) {
-                if (this.inteiro === true) {
+                if (this.inteiro) {
                     return parseInt((conta1 / conta2)) + `, ${parseInt((conta1 % conta2 ))}`;
                 } else {
                     return parseFloat((conta1 / conta2)) + `, ${parseFloat((conta1 % conta2 ))}`;
@@ -78,8 +78,8 @@ class calculadora {
     elevar(conta1, conta2) {
         try {
             if (!conta1 || !conta2) throw new Error("Um valor está faltando!");
-            if (isNaN(conta1)||isNaN(conta2)) throw new Error("Insira um valor válido!");
-            if (this.inteiro === true) {
+            if (isNaN(conta1) || isNaN(conta2)) throw new Error("Insira um valor válido!");
+            if (this.inteiro) {
                 return parseInt(Math.pow(conta1, conta2))
             } else {
                 return parseFloat(Math.pow(conta1, conta2));
@@ -92,8 +92,8 @@ class calculadora {
     imc(conta1, conta2) {
         try {
             if (!conta1 || !conta2) throw new Error("Um valor está faltando!");
-            if (isNaN(conta1)||isNaN(conta2)) throw new Error("Insira um valor válido!");
-            if (this.inteiro === true) {
+            if (isNaN(conta1) || isNaN(conta2)) throw new Error("Insira um valor válido!");
+            if (this.inteiro) {
                 return parseInt(conta1 / (conta2 * conta2))
             } else {
                 return parseFloat(conta1 / (conta2 * conta2));
@@ -106,10 +106,10 @@ class calculadora {
 	porcentagem(conta1, conta2) {
         try {
             if (!conta1 || !conta2) throw new Error("Um valor está faltando!");
-            if (isNaN(conta1)||isNaN(conta2)) throw new Error("Insira um valor válido!");
+            if (isNaN(conta1) || isNaN(conta2)) throw new Error("Insira um valor válido!");
             const maior = (parseFloat(conta1) > parseFloat(conta2) ? conta : conta2);
             const menor = (parseFloat(conta1) < parseFloat(conta2) ? conta1 : conta2);
-            if (this.inteiro === true) {
+            if (this.inteiro) {
                 return parseInt((menor/maior) * 100)
             } else {
                 return parseFloat((menor/maior) * 100);
@@ -120,7 +120,6 @@ class calculadora {
     }
 	
 	}
-
 };
 
-module.exports = calculadora;
+// LRD IS GAY rs
