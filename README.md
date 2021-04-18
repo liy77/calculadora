@@ -38,3 +38,9 @@ console.log(calcular.elevar(1, 2));
 ```js
 console.log(calcular.elevar(50, 2));
 ```
+
+# Fazendo conta de porcentagem.
+```js
+console.log(calcular.porcentagem(62, 30));
+```
+
