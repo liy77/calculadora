@@ -101,6 +101,24 @@ class calculadora {
             throw new Error(e);
         }
     }
+	
+	porcentagem(conta1, conta2) {
+        try {
+            if (!conta1 || !conta2) throw new Error("Um valor está faltando!");
+            if (isNaN(conta1)||isNaN(conta2)) throw new Error("Insira um valor válido!");
+            const maior = (parseFloat(conta1) > parseFloat(conta2) ? conta : conta2);
+            const menor = (parseFloat(conta1) < parseFloat(conta2) ? conta1 : conta2);
+            if (this.inteiro === true) {
+                return parseInt((menor/maior) * 100)
+            } else {
+                return parseFloat((menor/maior) * 100);
+            } 
+        } catch (e) {
+            throw new Error(e);
+        }
+    }
+	
+	}
 
 };
 
