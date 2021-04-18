@@ -1,4 +1,4 @@
-class calculadora {
+module.exports = class calculadora {
     constructor(int = false) {
         this.inteiro = int;
     }
@@ -103,5 +103,3 @@ class calculadora {
     }
 
 };
-
-module.exports = calculadora;
