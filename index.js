@@ -18,7 +18,7 @@ module.exports = class calculadora {
         try {
             if (!conta1 || !conta2) throw new Error("Um valor está faltando!");
             if (isNaN(conta1) || isNaN(conta2)) throw new Error("Insira um valor válido!");
-            if (this.inteiro === true) {
+            if (this.inteiro) {
                 return parseInt((conta1 + conta2))
             } else {
                 return parseFloat((conta1 + conta2));
