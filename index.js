@@ -1,6 +1,6 @@
 class calculadora {
     constructor(inteiro = false) {
-	if (typeof inteiro !== 'boolean') throw new Error("O valor deve ser do tipo boolean!")
+	if (typeof inteiro !== 'boolean') throw new Error("O valor inserido não é do tipo boolean, insira um valor do tipo boolean e tente novamente.")
         this.inteiro = Boolean(inteiro);
     }
 
