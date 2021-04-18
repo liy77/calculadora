@@ -1,6 +1,7 @@
 module.exports = class calculadora {
     constructor(int = false) {
         this.inteiro = int;
+     
     }
 
     /**
