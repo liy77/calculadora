@@ -1,46 +1,82 @@
-# calculadora
-Faça calculos facilmente com este npm!
+# Calculadora
 
-# Configurando
+Faça cálculos facilmente com este npm!
+
+- [Calculadora](#calculadora)
+  - [Configurando](#configurando)
+  - [Fazendo uma soma](#fazendo-uma-soma)
+  - [Fazendo uma subtração](#fazendo-uma-subtração)
+  - [Fazendo uma multiplicação](#fazendo-uma-multiplicação)
+  - [Fazendo uma divisão](#fazendo-uma-divisão)
+  - [Calculando o Resto de uma divisão](#calculando-o-resto-de-uma-divisão)
+  - [Elevando números](#elevando-números)
+  - [Calcular imc (índice de massa corporal)](#calcular-imc-índice-de-massa-corporal)
+  - [Calculando uma porcentagem](#calculando-uma-porcentagem)
+
+## Configurando
+
 ```js
 const Calculadora = require("calculadora-simples");
 
 const calcular = new Calculadora(false); 
-// false para os resultados serem inteiros ou reais.
+// se os resultados devem ser inteiros
+// default = false
 ```
 
-# Fazendo uma soma.
+## Fazendo uma soma
+
 ```js
-console.log(calcular.soma(1, 1));
+console.log(calcular.somar(1, 1));
+// => 2
 ```
 
-# Fazendo uma subtração.
+## Fazendo uma subtração
+
 ```js
 console.log(calcular.subtrair(3, 1));
+// => 2
 ```
 
-# Fazendo uma multiplicação.
+## Fazendo uma multiplicação
+
 ```js
-console.log(calcular.subtrair(2, 2));
+console.log(calcular.multiplicar(2, 3));
+// => 6
 ```
 
-# Fazendo uma divisão.
+## Fazendo uma divisão
+
 ```js
 console.log(calcular.dividir(5, 20));
+// inteiro = true => 0
+// inteiro = false (default) => 0.25
 ```
 
-# Elevando números.
+## Calculando o Resto de uma divisão
+
 ```js
-console.log(calcular.elevar(1, 2));
+console.log(calcular.resto(10, 3));
+// => 1
 ```
 
-# Fazendo imc.
+## Elevando números
+
 ```js
-console.log(calcular.elevar(50, 2));
+console.log(calcular.elevar(2, 2));
+// => 4
 ```
 
-# Fazendo conta de porcentagem.
+## Calcular imc (índice de massa corporal)
+
 ```js
-console.log(calcular.porcentagem(62, 30));
+console.log(calcular.imc(50, 175));
+// inteiro = true => 16
+// inteiro = false (default) => 16.326...
 ```
 
+## Calculando uma porcentagem
+
+```js
+console.log(calcular.porcentagem(25, 100));
+// => 25
+```

@@ -1,0 +1,15 @@
+{
+    "name": "calculadora-simples",
+    "version": "1.1.0",
+    "description": "Faça cálculos facilmente com este npm!",
+    "main": "index.js",
+    "repository": "https://github.com/L0R4/calculadora/",
+    "author": "L0R4",
+    "contributors": [
+        {
+            "name": "KuryKat",
+            "url": "https://github.com/KuryKat"
+        }
+    ],
+    "license": "GPL-3.0"
+}
